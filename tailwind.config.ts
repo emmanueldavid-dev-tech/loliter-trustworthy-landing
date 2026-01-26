@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         heading: ['Playfair Display', 'Georgia', 'serif'],
-        body: ['Montserrat', '-apple-system', 'sans-serif'],
+        body: ['Poppins', '-apple-system', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

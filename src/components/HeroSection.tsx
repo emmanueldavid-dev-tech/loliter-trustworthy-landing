@@ -10,14 +10,14 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen section-navy flex items-center">
-      {/* Background with overlay */}
+      {/* Background with more transparent overlay */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
           alt="Professional in modern city"
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/60 to-transparent" />
       </div>
 
       {/* Content */}
@@ -34,24 +34,18 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="font-body text-lg md:text-xl text-foreground/80 leading-relaxed mb-10 max-w-2xl animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <p className="font-body text-lg md:text-xl text-foreground/90 leading-relaxed mb-10 max-w-2xl animate-fade-in-up font-light" style={{ animationDelay: "0.2s" }}>
             Your Trusted Relocation Support. UK-registered assistance for 
             international travel, study, and visa applications.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+          {/* CTA Button */}
+          <div className="animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
             <button
               onClick={() => scrollToSection("cta")}
               className="btn-gold"
             >
               Start Your Application
-            </button>
-            <button
-              onClick={() => scrollToSection("about")}
-              className="btn-navy"
-            >
-              Learn More
             </button>
           </div>
         </div>
