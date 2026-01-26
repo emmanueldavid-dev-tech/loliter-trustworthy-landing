@@ -46,7 +46,7 @@
 
     /* Typography */
     --font-heading: 'Playfair Display', Georgia, serif;
-    --font-body: 'Montserrat', -apple-system, sans-serif;
+    --font-body: 'Poppins', -apple-system, sans-serif;
 
     /* Shadows */
     --shadow-card: 0 4px 24px rgba(0, 55, 95, 0.12);
@@ -89,24 +89,35 @@
   /* Button Variants */
   .btn-gold {
     @apply bg-primary text-primary-foreground font-body font-semibold 
-           px-8 py-4 uppercase tracking-wider text-sm
-           transition-all duration-300 ease-out
-           hover:brightness-110 hover:shadow-lg;
+           px-10 py-4 uppercase tracking-widest text-sm
+           transition-all duration-500 ease-out
+           hover:shadow-[0_8px_30px_rgba(197,160,89,0.4)] hover:translate-y-[-2px]
+           relative overflow-hidden;
+  }
+
+  .btn-gold::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent
+           translate-x-[-100%] transition-transform duration-700;
+  }
+
+  .btn-gold:hover::before {
+    @apply translate-x-[100%];
   }
 
   .btn-navy {
-    @apply bg-background text-foreground font-body font-semibold 
-           px-8 py-4 uppercase tracking-wider text-sm
-           border border-primary
-           transition-all duration-300 ease-out
-           hover:bg-primary hover:text-primary-foreground;
+    @apply bg-transparent text-foreground font-body font-semibold 
+           px-10 py-4 uppercase tracking-widest text-sm
+           border-2 border-primary
+           transition-all duration-500 ease-out
+           hover:bg-primary hover:text-primary-foreground hover:shadow-[0_8px_30px_rgba(197,160,89,0.3)];
   }
 
   .btn-white {
     @apply bg-secondary text-secondary-foreground font-body font-semibold 
-           px-8 py-4 uppercase tracking-wider text-sm
-           transition-all duration-300 ease-out
-           hover:bg-primary hover:text-primary-foreground;
+           px-10 py-4 uppercase tracking-widest text-sm
+           transition-all duration-500 ease-out
+           hover:bg-primary hover:text-primary-foreground hover:shadow-lg;
   }
 
   /* Card with Gold Border */
