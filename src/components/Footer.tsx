@@ -63,9 +63,12 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="font-body text-sm text-foreground/70">
-                  info@lolitertravels.com
-                </span>
+                <a
+                  href="mailto:Info@lolitertravels.com"
+                  className="font-body text-sm text-foreground/70 hover:text-primary transition-colors"
+                >
+                  Info@lolitertravels.com
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
